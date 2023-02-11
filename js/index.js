@@ -22,4 +22,18 @@ $(window).on('load', function(){
             });
         }
     });
+    
+    var productFields = Object.keys(productLocations[0]);
+    
+    var indexedProductList = elasticlunr(function () {
+        productFields.forEach(element => {
+            this.addField(element);
+        })
+        this.setRef('Art Desc');
+    });
+
+    productLocations.forEach(element => {
+        indexedProductList.addDoc(element);
+    });
+    
 })
