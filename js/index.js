@@ -1,4 +1,5 @@
 var productLocations;
+var indexedProductList
 
 $(window).on('load', function(){
     //Import Product Location Data
@@ -23,9 +24,14 @@ $(window).on('load', function(){
         }
     });
     
+    initProducts();
+    
+})
+
+function initProducts(){
     var productFields = Object.keys(productLocations[0]);
     
-    var indexedProductList = elasticlunr(function () {
+    indexedProductList = elasticlunr(function () {
         productFields.forEach(element => {
             this.addField(element);
         })
@@ -35,5 +41,10 @@ $(window).on('load', function(){
     productLocations.forEach(element => {
         indexedProductList.addDoc(element);
     });
+}
+
+function updateSearchResults(){
+	console.log("Search query:" + searchBox.value);
+    console.log(indexedProductList.search(searchBox.value).slice(0,6));
     
-})
+}
