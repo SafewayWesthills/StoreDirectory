@@ -50,7 +50,7 @@ function updateSearchResults(event){
     var searchResults = indexedProductList.search(event.target.value);
     console.log(searchResults.slice(0,5));
     
-    var searchOutput = document.GetElementById("searchOutput");
+    var searchOutput = document.getElementById("searchOutput");
     searchResults.forEach(element => {
         searchOutput.appendChild(element);
     })
