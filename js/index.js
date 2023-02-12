@@ -52,7 +52,12 @@ function updateSearchResults(event){
     
     var searchOutput = document.getElementById("searchOutput");
     searchResults.forEach(element => {
-        searchOutput.appendChild(element);
+        var p = document.createElement("p");
+        var text = document.createTextNode(element);
+        console.log("Element: " + element);
+        p.appendChild(text);
+        searchOutput.appendChild(p);
+        //searchOutput.appendChild("<p>" + element + "</p>");
     })
     
     
