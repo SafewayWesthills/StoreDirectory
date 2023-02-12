@@ -25,6 +25,8 @@ $(window).on('load', function(){
     });
     
     initProducts();
+    var searchBox = document.getElementById("searchbox");
+    searchBox.addEventListener("input", updateSearchResults);
     
 })
 
