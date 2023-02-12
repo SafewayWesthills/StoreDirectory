@@ -47,6 +47,13 @@ function initProducts(){
 
 function updateSearchResults(event){
     console.log("Search query:" + event.target.value);
-    console.log(indexedProductList.search(event.target.value).slice(0,6));
+    var searchResults = indexedProductList.search(event.target.value);
+    console.log(searchResults.slice(0,5));
+    
+    var searchOutput = document.GetElementById("searchOutput");
+    searchResults.forEach(element => {
+        searchOutput.appendChild(element);
+    })
+    
     
 }
