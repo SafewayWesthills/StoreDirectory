@@ -45,8 +45,8 @@ function initProducts(){
     });
 }
 
-function updateSearchResults(){
-	console.log("Search query:" + searchBox.value);
-    console.log(indexedProductList.search(searchBox.value).slice(0,6));
+function updateSearchResults(event){
+    console.log("Search query:" + event.target.value);
+    console.log(indexedProductList.search(event.target.value).slice(0,6));
     
 }
