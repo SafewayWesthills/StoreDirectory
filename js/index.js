@@ -51,13 +51,12 @@ function updateSearchResults(event){
     console.log(searchResults.slice(0,5));
     
     var searchOutput = document.getElementById("searchOutput");
-    searchResults.forEach(element => {
+    searchOutput.textContent = '';
+    searchResults.slice(0,10).forEach(element => {
         var p = document.createElement("p");
-        var text = document.createTextNode(element);
-        console.log("Element: " + element);
+        var text = document.createTextNode(element.ref);
         p.appendChild(text);
         searchOutput.appendChild(p);
-        //searchOutput.appendChild("<p>" + element + "</p>");
     })
     
     
