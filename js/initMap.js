@@ -6,15 +6,15 @@ $(function () {
     //     backgroundColor: "white",
     //     regionStyle: {
     //         initial: {
-    //             fill: 'white',
+    //             "fill": 'white',
     //             "fill-opacity": 1,
-    //             stroke: 'black',
+    //             "stroke": 'black',
     //             "stroke-width": 0.1,
     //             "stroke-opacity": 1
     //         },
     //         hover: {
     //             "fill-opacity": 0.8,
-    //             cursor: 'pointer'
+    //             "cursor": 'pointer',
     //         },
     //         selected: {
     //             fill: 'yellow'
@@ -22,6 +22,14 @@ $(function () {
     //         selectedHover: {
     //         }
     //     },
+    //     labels: {
+    //         regions: {
+    //             render: function (code) {
+    //                 return code;
+    //             }
+    //         },
+    //     },
+
     //     markers: [
     //         // { coords: [0, 0], name: 'Marker 1', style: { fill: 'yellow' } },
     //         // { coords: [150, 150], name: 'Marker 2', style: { fill: 'yellow' } },
@@ -57,7 +65,7 @@ $(function () {
             // { coords: [300, 300], name: 'Marker 2', style: { fill: 'yellow' } },
         ],
         onRegionTipShow: function(event, tip, code){
-            tip.html(""); // Line 13 in jquer-jvectormaps.css has commented out stylingt o fully hide tip
+            tip.html(""); // Line 13 in jquery-jvectormaps.css has commented out stylingt o fully hide tip
 
         }
     });
