@@ -60,9 +60,7 @@ $(function () {
             }
         },
         markers: [
-            // { coords: [0, 0], name: 'Marker 1', style: { fill: 'yellow' } },
-            // { coords: [150, 150], name: 'Marker 2', style: { fill: 'yellow' } },
-            // { coords: [300, 300], name: 'Marker 2', style: { fill: 'yellow' } },
+            { coords: [253, 150], name: 'Marker 2', style: { fill: 'yellow' } },
         ],
         onRegionTipShow: function(event, tip, code){
             tip.html(""); // Line 13 in jquery-jvectormaps.css has commented out stylingt o fully hide tip
