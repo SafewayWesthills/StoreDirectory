@@ -78,3 +78,8 @@ i {
 #searchbox {
     width:100%;
 }
+
+circle[data-index]:after{
+    content: "12";
+
+}

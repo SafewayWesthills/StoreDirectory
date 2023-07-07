@@ -60,10 +60,12 @@ $(function () {
             }
         },
         markers: [
-            { coords: [253, 150], name: 'Marker 2', style: { fill: 'yellow' } },
+            { coords: [253, 150], name: 'Aisle 12', style: { fill: 'yellow' } },
+            { coords: [232, 150], name: 'Aisle 11', style: { fill: 'blue' } },
+            { coords: [212, 150], name: 'Aisle 10', style: { fill: 'red' } },
         ],
         onRegionTipShow: function(event, tip, code){
-            tip.html(""); // Line 13 in jquery-jvectormaps.css has commented out stylingt o fully hide tip
+            tip.html(""); // Line 13 in jquery-jvectormaps.css has commented out styling to fully hide tip
 
         }
     });
