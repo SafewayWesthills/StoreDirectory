@@ -83,3 +83,10 @@ circle[data-index]:after{
     content: "12";
 
 }
+
+path {
+    transform-origin: center;
+    transform: scale(0.95);
+    transform-box: fill-box;
+    clip-path: inset(0 0 0 0 round 1px);
+}
